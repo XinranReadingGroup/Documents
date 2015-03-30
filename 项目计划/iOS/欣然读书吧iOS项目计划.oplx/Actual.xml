@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="hDwQqkSbve5">
+  <start-date>2015-03-30T00:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t4294967294">
+      <title>&gt;任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t4294967293">
+      <title>&gt;里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t4294967292">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r4294967294">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r4294967293">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r4294967292">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r4294967291">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <type>Group</type>
+    <schedule>
+      <schedule-day day-of-week="sunday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="64800"/>
+      </schedule-day>
+      <schedule-day day-of-week="monday">
+        <time-span start-time="75600" end-time="79200"/>
+      </schedule-day>
+      <schedule-day day-of-week="tuesday">
+        <time-span start-time="75600" end-time="79200"/>
+      </schedule-day>
+      <schedule-day day-of-week="wednesday">
+        <time-span start-time="75600" end-time="79200"/>
+      </schedule-day>
+      <schedule-day day-of-week="thursday">
+        <time-span start-time="75600" end-time="79200"/>
+      </schedule-day>
+      <schedule-day day-of-week="friday">
+        <time-span start-time="75600" end-time="79200"/>
+      </schedule-day>
+      <schedule-day day-of-week="saturday">
+        <time-span start-time="28800" end-time="43200"/>
+        <time-span start-time="46800" end-time="66600"/>
+      </schedule-day>
+      <calendar name="Time Off" editable="yes" overtime="no"/>
+      <calendar name="Overtime" editable="yes" overtime="yes"/>
+    </schedule>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>资源 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t1"/>
+  </task>
+  <task id="t1">
+    <title>欣然读书吧</title>
+    <type>group</type>
+    <child-task idref="t2"/>
+    <child-task idref="t3"/>
+    <child-task idref="t4"/>
+    <child-task idref="t5"/>
+    <child-task idref="t6"/>
+  </task>
+  <task id="t2">
+    <title>登录</title>
+    <effort>14400</effort>
+  </task>
+  <task id="t3">
+    <title>注册</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t2"/>
+  </task>
+  <task id="t4">
+    <title>首页</title>
+    <type>group</type>
+    <child-task idref="t16"/>
+    <child-task idref="t17"/>
+    <child-task idref="t18"/>
+    <child-task idref="t19"/>
+    <child-task idref="t20"/>
+    <child-task idref="t21"/>
+    <child-task idref="t22"/>
+    <child-task idref="t23"/>
+    <child-task idref="t24"/>
+    <child-task idref="t26"/>
+    <child-task idref="t27"/>
+    <prerequisite-task idref="t3"/>
+  </task>
+  <task id="t5">
+    <title>我的</title>
+    <type>group</type>
+    <child-task idref="t10"/>
+    <child-task idref="t15"/>
+    <child-task idref="t11"/>
+    <child-task idref="t29"/>
+    <child-task idref="t12"/>
+    <child-task idref="t30"/>
+    <child-task idref="t13"/>
+    <child-task idref="t31"/>
+    <child-task idref="t14"/>
+    <prerequisite-task idref="t27"/>
+  </task>
+  <task id="t6">
+    <title>更多</title>
+    <type>group</type>
+    <child-task idref="t7"/>
+    <child-task idref="t8"/>
+    <child-task idref="t9"/>
+    <prerequisite-task idref="t14"/>
+  </task>
+  <task id="t7">
+    <title>分享给朋友</title>
+    <effort>10800</effort>
+  </task>
+  <task id="t8">
+    <title>意见反馈</title>
+    <effort>14400</effort>
+    <prerequisite-task idref="t7"/>
+  </task>
+  <task id="t9">
+    <title>关于</title>
+    <effort>7200</effort>
+    <prerequisite-task idref="t8"/>
+  </task>
+  <task id="t10">
+    <title>我的主页</title>
+    <effort>28800</effort>
+  </task>
+  <task id="t11">
+    <title>捐书记录</title>
+    <effort>21600</effort>
+    <prerequisite-task idref="t15"/>
+  </task>
+  <task id="t12">
+    <title>借阅记录</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t29"/>
+  </task>
+  <task id="t13">
+    <title>共享记录</title>
+    <effort>21600</effort>
+    <prerequisite-task idref="t30"/>
+  </task>
+  <task id="t14">
+    <title>公益积分</title>
+    <effort>10800</effort>
+    <prerequisite-task idref="t31"/>
+  </task>
+  <task id="t15">
+    <title>个人信息</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t10"/>
+  </task>
+  <task id="t16">
+    <title>首页</title>
+    <effort>14400</effort>
+  </task>
+  <task id="t17">
+    <title>搜索</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t16"/>
+  </task>
+  <task id="t18">
+    <title>借阅书图书详情</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t17"/>
+  </task>
+  <task id="t19">
+    <title>分享书图书详情</title>
+    <effort>7200</effort>
+    <prerequisite-task idref="t18"/>
+  </task>
+  <task id="t20">
+    <title>借书扫码</title>
+    <effort>21600</effort>
+    <prerequisite-task idref="t19"/>
+  </task>
+  <task id="t21">
+    <title>借阅成功/失败</title>
+    <effort>10800</effort>
+    <prerequisite-task idref="t20"/>
+  </task>
+  <task id="t22">
+    <title>捐书二维码扫描</title>
+    <effort>14400</effort>
+    <prerequisite-task idref="t21"/>
+  </task>
+  <task id="t23">
+    <title>编辑书籍信息</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t22"/>
+  </task>
+  <task id="t24">
+    <title>捐书成功</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t23"/>
+  </task>
+  <task id="t26">
+    <title>无法获取书籍信息</title>
+    <effort>7200</effort>
+    <prerequisite-task idref="t24"/>
+  </task>
+  <task id="t27">
+    <title>录入书籍信息</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t26"/>
+  </task>
+  <task id="t29">
+    <title>捐书详情</title>
+    <effort>10800</effort>
+    <prerequisite-task idref="t11"/>
+  </task>
+  <task id="t30">
+    <title>借阅书详情</title>
+    <effort>10800</effort>
+    <prerequisite-task idref="t12"/>
+  </task>
+  <task id="t31">
+    <title>共享书详情</title>
+    <effort>14400</effort>
+    <prerequisite-task idref="t13"/>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>
